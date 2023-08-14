@@ -2,13 +2,13 @@
 import { FC } from "react";
 import { usePathname } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
-import { singlePost } from "@/service";
+import { getSinglePost } from "@/service";
 const Page: FC = () => {
   const slug = usePathname().split("/")[2];
 
   const { data, isLoading } = useQuery({
     queryKey: ["singlepost"],
-    queryFn: () => singlePost(slug),
+    queryFn: () => getSinglePost(slug),
   });
 
   if (isLoading) return <>loadin</>;

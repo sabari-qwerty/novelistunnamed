@@ -5,8 +5,9 @@ import {} from "@/service";
 import { useQuery } from "@tanstack/react-query";
 import { ShowSinglePost } from "@/components/ShowSinglePost";
 import { HorrorLayout } from "@/components/Layout/HorrorLaout";
-const page = () => {
-  const slug = usePathname().split("/")[2];
+const Page: FC = () => {
+  const path = usePathname();
+  const slug = path.split("/")[2];
 
   // const { data, isLoading } = useQuery({
   //   queryKey: ["singlepost"],
@@ -23,4 +24,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
