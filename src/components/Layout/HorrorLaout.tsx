@@ -18,7 +18,7 @@ export const HorrorLayout: FC<HorrorLayout> = ({ children }) => {
   return (
     <div>
       {showDiv && (
-        <div className="absolute ">
+        <div className="absolute w-full overflow-hidden">
           <div className="image-continer">
             <div className="image">
               <img src="/mask-sprite-claws.svg" alt="hello" />
