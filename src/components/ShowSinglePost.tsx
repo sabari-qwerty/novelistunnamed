@@ -3,12 +3,15 @@ import { getSinglePost } from "@/service";
 import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
 import { FC } from "react";
-
+import { usePathname } from "next/navigation";
 interface ShowSinglePost {
   slug: string;
+  type: "story" | "poems" | "exploremore";
 }
 
-export const ShowSinglePost: FC<ShowSinglePost> = ({ slug }) => {
+export const ShowSinglePost: FC<ShowSinglePost> = ({ slug, type }) => {
+  const path = usePathname();
+
   const { data, isLoading } = useQuery({
     queryKey: ["single"],
     queryFn: () =>
@@ -45,7 +48,9 @@ export const ShowSinglePost: FC<ShowSinglePost> = ({ slug }) => {
           </div>
         </div>
         <div
-          className="pt-6 w-3/5 flex justify-center flex-col space-y-4 text-center"
+          className={`pt-6 w-3/5 flex justify-center flex-col space-y-4 ${
+            type === "poems" ? "text-center" : ""
+          }`}
           dangerouslySetInnerHTML={{
             __html: data["content"]["html"],
           }}
