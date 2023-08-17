@@ -7,9 +7,10 @@ import { usePathname } from "next/navigation";
 interface ShowSinglePost {
   slug: string;
   type: "story" | "poems" | "exploremore";
+  catgery: string;
 }
 
-export const ShowSinglePost: FC<ShowSinglePost> = ({ slug, type }) => {
+export const ShowSinglePost: FC<ShowSinglePost> = ({ slug, type, catgery }) => {
   const path = usePathname();
 
   const { data, isLoading } = useQuery({
@@ -75,7 +76,7 @@ export const ShowSinglePost: FC<ShowSinglePost> = ({ slug, type }) => {
                   <h2 className="card-title">{data["title"]}</h2>
                   <p>{data["excerot"]}</p>
                   <Link
-                    href={`/horror-novels/${data["slug"]}`}
+                    href={`/${catgery}/${data["slug"]}`}
                     className="card-actions justify-end"
                   >
                     <button className="btn btn-primary">Read more</button>

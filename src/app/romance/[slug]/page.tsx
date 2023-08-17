@@ -1,20 +1,24 @@
 "use client";
 import { FC } from "react";
 import { usePathname } from "next/navigation";
+import {} from "@/service";
 import { useQuery } from "@tanstack/react-query";
-import { getSinglePost } from "@/service";
+import { ShowSinglePost } from "@/components/ShowSinglePost";
+import { HorrorLayout } from "@/components/Layout/HorrorLaout";
 const Page: FC = () => {
-  const slug = usePathname().split("/")[2];
+  const path = usePathname();
+  const slug = path.split("/")[2];
+  const catgery = path.split("/")[1];
 
-  const { data, isLoading } = useQuery({
-    queryKey: ["singlepost"],
-    queryFn: () => getSinglePost(slug),
-  });
+  // const { data, isLoading } = useQuery({
+  //   queryKey: ["singlepost"],
+  //   queryFn: () => singlePost(slug).then((data) => data["data"]["data"]),
+  // });
 
-  if (isLoading) return <>loadin</>;
+  // if (isLoading) return <>loadin</>;
   return (
     <main className="text-white">
-      <div>{JSON.stringify(data)}</div>
+      <ShowSinglePost slug={slug} type="poems" catgery={catgery} />
     </main>
   );
 };

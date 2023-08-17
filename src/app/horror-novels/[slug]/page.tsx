@@ -8,6 +8,7 @@ import { HorrorLayout } from "@/components/Layout/HorrorLaout";
 const Page: FC = () => {
   const path = usePathname();
   const slug = path.split("/")[2];
+  const catgery = path.split("/")[1];
 
   // const { data, isLoading } = useQuery({
   //   queryKey: ["singlepost"],
@@ -18,7 +19,7 @@ const Page: FC = () => {
   return (
     <main className="text-white">
       <HorrorLayout>
-        <ShowSinglePost slug={slug} type="story" />
+        <ShowSinglePost slug={slug} type="story" catgery={catgery} />
       </HorrorLayout>
     </main>
   );
