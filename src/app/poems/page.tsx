@@ -8,7 +8,7 @@ const Poems: FC = () => {
   return (
     <ShowCatgaryData
       catgaryid="clkwfxa5t02wg0bpmzq1ud8qn"
-      catgrayname="poem"
+      catgrayname="poems"
       skip={count}
     />
   );

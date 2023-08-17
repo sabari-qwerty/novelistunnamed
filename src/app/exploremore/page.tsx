@@ -6,7 +6,7 @@ const Exploremore = () => {
   const [count, setCount] = useState(0);
   return (
     <ShowCatgaryData
-      catgrayname="short-stories"
+      catgrayname="exploremore"
       catgaryid="clkwk9mgw06ma0bpmrsqv7g76"
       skip={count}
     />

@@ -17,9 +17,7 @@ const Page: FC = () => {
   // if (isLoading) return <>loadin</>;
   return (
     <main className="text-white">
-      <HorrorLayout>
-        <ShowSinglePost slug={slug} type="story" />
-      </HorrorLayout>
+      <ShowSinglePost slug={slug} type="poems" />
     </main>
   );
 };

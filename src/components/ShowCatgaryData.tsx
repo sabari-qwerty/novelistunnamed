@@ -20,7 +20,7 @@ export const ShowCatgaryData: FC<SCD> = ({ catgrayname, catgaryid, skip }) => {
     <div className="flex flex-col space-y-8 xl:w-3/5 lg:w-4/5 sm:w-[90%] mx-auto text-[#ffffffb6]">
       {data.map((data: posts, key: number) => (
         <Link
-          href={`/horror-novels/${data.slug}`}
+          href={`/${catgrayname}/${data.slug}`}
           key={key}
           className="card lg:card-side bg-base-100 shadow-xl"
         >
