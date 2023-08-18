@@ -1,7 +1,6 @@
 "use client";
 import { FC } from "react";
 import { usePathname } from "next/navigation";
-import {} from "@/service";
 import { useQuery } from "@tanstack/react-query";
 import { ShowSinglePost } from "@/components/ShowSinglePost";
 import { HorrorLayout } from "@/components/Layout/HorrorLaout";
