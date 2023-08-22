@@ -23,7 +23,7 @@ export const ShowSinglePost: FC<ShowSinglePost> = ({ slug, type, catgery }) => {
 
   if (isLoading) return <div className="w-full bg-black h-screen"></div>;
   return (
-    <main className=" sm:flex-col bg-[] lg:flex-row -z-10">
+    <main className=" sm:flex-col bg-[#1d232a] lg:flex-row -z-10">
       <div
         className={`flex flex-col space-y-8      justify-center items-center pb-10 ${
           [...data["connections"][0]["post"]].length > 0
@@ -32,10 +32,14 @@ export const ShowSinglePost: FC<ShowSinglePost> = ({ slug, type, catgery }) => {
         } `}
       >
         <h1 className="text-2xl font-bold">{data["title"]}</h1>
-        <div className="max-w-[400px] max-h-[600px] overflow-hidden">
-          <img src={data["featuredImages"]["url"]} alt="featuredImages" />
+        <div className="w-[400px] h-[600px] ">
+          <img
+            src={data["featuredImages"]["url"]}
+            alt="featuredImages"
+            className="object-cover"
+          />
         </div>
-        <div>
+        <div className="py-6 ">
           <div className="flex  text-sm w-[95%]  items-center justify-center">
             <img
               src={data["authors"][0]["photo"]["url"]}
