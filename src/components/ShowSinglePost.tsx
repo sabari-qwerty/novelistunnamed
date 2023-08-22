@@ -23,7 +23,7 @@ export const ShowSinglePost: FC<ShowSinglePost> = ({ slug, type, catgery }) => {
 
   if (isLoading) return <div className="w-full bg-black h-screen"></div>;
   return (
-    <main className=" flex sm:flex-col bg-[#1d232a] lg:flex-row -z-10">
+    <main className=" flex sm:flex-col bg-[#1d232a] lg:flex-row -z-10 overflow-x-hidden">
       <div
         className={`flex flex-col space-y-8      justify-center items-center pb-10 ${
           [...data["connections"][0]["post"]].length > 0
