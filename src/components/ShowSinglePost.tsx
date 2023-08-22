@@ -32,7 +32,7 @@ export const ShowSinglePost: FC<ShowSinglePost> = ({ slug, type, catgery }) => {
         } `}
       >
         <h1 className="text-2xl font-bold">{data["title"]}</h1>
-        <div className="w-[400px] h-[600px] ">
+        <div className="w-[320px] h-[520px] ">
           <img
             src={data["featuredImages"]["url"]}
             alt="featuredImages"
