@@ -26,7 +26,7 @@ export const HorrorLayout: FC<HorrorLayout> = ({ children }) => {
           </div>
         </div>
       )}
-      <div className="  w-full  ">{children}</div>
+      <div className="  w-full bg-[#1d232a]  ">{children}</div>
     </div>
   );
 };
