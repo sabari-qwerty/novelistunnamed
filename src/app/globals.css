@@ -4,11 +4,9 @@
 
 @import url("https://fonts.cdnfonts.com/css/arial-2");
 
-* {
-  background-color: #1d232a;
-}
 body {
   font-family: "Arial" !important;
+  background-color: #1d232a !important;
 }
 /* swiper */
 
