@@ -23,7 +23,7 @@ export const ShowSinglePost: FC<ShowSinglePost> = ({ slug, type, catgery }) => {
 
   if (isLoading) return <div className="w-full bg-black h-screen"></div>;
   return (
-    <main className=" sm:flex-col bg-[#1d232a] lg:flex-row -z-10">
+    <main className=" flex sm:flex-col bg-[#1d232a] lg:flex-row -z-10">
       <div
         className={`flex flex-col space-y-8      justify-center items-center pb-10 ${
           [...data["connections"][0]["post"]].length > 0
@@ -53,8 +53,8 @@ export const ShowSinglePost: FC<ShowSinglePost> = ({ slug, type, catgery }) => {
           </div>
         </div>
         <div
-          className={`pt-6 w-3/5 flex justify-center flex-col space-y-4 ${
-            type === "poems" ? "text-center" : ""
+          className={`pt-6 w-3/5 flex justify-center flex-col space-y-4 text-2xl  ${
+            type === "poems" ? "text-center " : ""
           }`}
           dangerouslySetInnerHTML={{
             __html: data["content"]["html"],
@@ -64,11 +64,11 @@ export const ShowSinglePost: FC<ShowSinglePost> = ({ slug, type, catgery }) => {
       <div
         className={`   ${
           [...data["connections"][0]["post"]].length > 1
-            ? "right-0  lg:w-2/5 sm:w-4/5  mx-auto     flex justify-center"
+            ? "right-0  lg:w-2/5 sm:w-4/5  mx-auto    flex justify-center"
             : "hidden"
         } `}
       >
-        <div className="     flex  lg:flex-col    lg:w-full    overflow-scroll  items-center space-y-6">
+        <div className="     flex  lg:flex-col    lg:w-full    sm:overflow-auto  lg:overflow-hidden items-center space-y-6">
           {[...data["connections"][0]["post"]]
             .filter((data) => data["slug"] != slug)
             .map((data, key) => (
