@@ -18,12 +18,12 @@ export const ShowCatgaryData: FC<SCD> = ({ catgrayname, catgaryid, skip }) => {
 
   return (
     <div className="w-full h-full bg-[#1d232a]">
-      <div className="flex flex-col space-y-8 xl:w-3/5 lg:w-4/5 sm:w-[90%] mx-auto text-[#ffffffb6]">
+      <div className="flex flex-col space-y-8 xl:w-3/5 lg:w-4/5 bg-[#1d232a] sm:w-[90%] mx-auto text-[#ffffffb6]">
         {data.map((data: posts, key: number) => (
           <Link
             href={`/${catgrayname}/${data.slug}`}
             key={key}
-            className="card lg:card-side bg-base-100 shadow-xl"
+            className="card lg:card-side  shadow-xl bg-[#1d232a]"
           >
             <div className=" sm:w-full lg:w-fit sm:mx-auto flex lg:justify-start lg:mx-0 sm:justify-center">
               <figure className="min-w-[200px] min-h-[400px] max-w-[200px] max-h-[400px] ">

@@ -53,7 +53,7 @@ export const ShowSinglePost: FC<ShowSinglePost> = ({ slug, type, catgery }) => {
           </div>
         </div>
         <div
-          className={`pt-6 w-3/5 flex justify-center flex-col space-y-4 text-2xl  ${
+          className={`pt-6 lg:w-3/5 sm:w-full flex justify-center flex-col space-y-4 sm:text-base lg:text-2xl  ${
             type === "poems" ? "text-center " : ""
           }`}
           dangerouslySetInnerHTML={{
