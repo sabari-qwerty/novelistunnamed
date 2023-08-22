@@ -36,7 +36,7 @@ export const ShowSinglePost: FC<ShowSinglePost> = ({ slug, type, catgery }) => {
           <img
             src={data["featuredImages"]["url"]}
             alt="featuredImages"
-            className="object-cover"
+            className="object-cover w-full h-full"
           />
         </div>
         <div className="py-6 ">

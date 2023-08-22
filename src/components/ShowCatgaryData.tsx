@@ -26,11 +26,11 @@ export const ShowCatgaryData: FC<SCD> = ({ catgrayname, catgaryid, skip }) => {
             className="card lg:card-side  shadow-xl bg-[#1d232a] w-[90%] mx-auto"
           >
             <div className=" sm:w-full lg:w-fit sm:mx-auto flex lg:justify-start lg:mx-0 sm:justify-center">
-              <figure className="min-w-[200px] min-h-[400px] max-w-[200px] max-h-[400px] ">
+              <figure className="w-[200px] h-[400px] ">
                 <img
                   src={data.featuredImages.url}
                   alt="Album"
-                  className="rounded-md"
+                  className="rounded-md "
                 />
               </figure>
             </div>
