@@ -38,11 +38,11 @@ export const HeroPageSmall: FC = () => {
         effect={"cards"}
         grabCursor={true}
         modules={[EffectCards]}
-        className="swiper-slide"
+        className="swiper-slide "
         onSlideChange={handleSlideChaneg}
       >
         {HeroPageContent.map((data, key) => (
-          <SwiperSlide className="w-full h-full " key={key}>
+          <SwiperSlide className="w-full h-full  " key={key}>
             <Link href={data.dir}>
               <Image
                 src={data.img}
