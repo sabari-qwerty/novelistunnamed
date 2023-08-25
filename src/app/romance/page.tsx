@@ -7,7 +7,7 @@ const Romance = () => {
       href={"/"}
       className="w-full h-screen text-6xl flex justify-center items-center text-white underline "
     >
-      Comming...
+      To be launched !{" "}
     </Link>
   );
 };
