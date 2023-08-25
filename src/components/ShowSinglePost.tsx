@@ -72,21 +72,19 @@ export const ShowSinglePost: FC<ShowSinglePost> = ({ slug, type, catgery }) => {
           {[...data["connections"][0]["post"]]
             .filter((data) => data["slug"] != slug)
             .map((data, key) => (
-              <div
-                className="card sm:min-w-[400px]  lg:w-96 bg-base-100 shadow-xl "
+              <Link
+                href={`/${catgery}/${data["slug"]}`}
+                className="card sm:min-w-[400px] sm:min-h-[380px]  bg-[#1d232a]  lg:w-96  shadow-xl "
                 key={key}
               >
                 <div className="card-body">
                   <h2 className="card-title">{data["title"]}</h2>
                   <p>{data["excerot"]}</p>
-                  <Link
-                    href={`/${catgery}/${data["slug"]}`}
-                    className="card-actions justify-end"
-                  >
+                  <div className="card-actions justify-end">
                     <button className="btn btn-primary">Read more</button>
-                  </Link>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
         </div>
       </div>
