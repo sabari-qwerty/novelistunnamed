@@ -1,8 +1,9 @@
+"use client";
 import { singlePost } from "@/interface/types";
 import { getSinglePost } from "@/service";
 import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
-import { FC } from "react";
+import { FC, useState } from "react";
 import { usePathname } from "next/navigation";
 interface ShowSinglePost {
   slug: string;
@@ -20,6 +21,13 @@ export const ShowSinglePost: FC<ShowSinglePost> = ({ slug, type, catgery }) => {
         .then((data) => data[0])
         .catch((err) => err),
   });
+  var index;
+  if (data) {
+    const data_ = [...data["connections"][0]["post"]]
+      .map((data: any) => data["slug"])
+      .findIndex((data: any) => data === slug);
+    index = data_;
+  }
 
   if (isLoading) return <div className="w-full bg-black h-screen"></div>;
   return (
@@ -69,7 +77,10 @@ export const ShowSinglePost: FC<ShowSinglePost> = ({ slug, type, catgery }) => {
         } `}
       >
         <div className="     flex  lg:flex-col    lg:w-full    sm:overflow-auto  lg:overflow-hidden items-center space-y-6">
-          {[...data["connections"][0]["post"]]
+          {[
+            ...[...data["connections"][0]["post"]].slice(index),
+            ...[...data["connections"][0]["post"]].slice(0, index),
+          ]
             .filter((data) => data["slug"] != slug)
             .map((data, key) => (
               <Link
