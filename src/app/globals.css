@@ -74,6 +74,7 @@ body {
   animation-name: moveforward;
   animation-duration: 2000ms;
   animation-fill-mode: forwards;
+  animation-delay: 1500ms;
   height: 100vh;
   width: 50000px;
 }
