@@ -1,14 +1,22 @@
+"use client";
+import { ShowCatgaryData } from "@/components/ShowCatgaryData";
+import { Goback } from "@/components/goback";
 import Link from "next/link";
-import React from "react";
+import { FC, useState } from "react";
 
 const Romance = () => {
+  const [count, setCount] = useState(0);
+
   return (
-    <Link
-      href={"/"}
-      className="w-full h-screen text-6xl flex justify-center items-center text-white underline "
-    >
-      To be launched !{" "}
-    </Link>
+    <>
+      <div className="">
+        <ShowCatgaryData
+          catgaryid="clok5y12l0pqz0bpjg5wpk91y"
+          catgrayname="romance"
+          skip={count}
+        />
+      </div>
+    </>
   );
 };
 

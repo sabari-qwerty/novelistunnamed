@@ -76,7 +76,7 @@ export const ShowSinglePost: FC<ShowSinglePost> = ({ slug, type, catgery }) => {
             : "hidden"
         } `}
       >
-        <div className="     flex  lg:flex-col    lg:w-full    sm:overflow-auto  lg:overflow-hidden items-center space-y-6">
+        <div className="     flex  lg:flex-col    lg:w-full    sm:overflow-auto  lg:overflow-hidden items-center space-y-6 ">
           {[
             ...[...data["connections"][0]["post"]].slice(index),
             ...[...data["connections"][0]["post"]].slice(0, index),
@@ -85,7 +85,7 @@ export const ShowSinglePost: FC<ShowSinglePost> = ({ slug, type, catgery }) => {
             .map((data, key) => (
               <Link
                 href={`/${catgery}/${data["slug"]}`}
-                className="card sm:min-w-[400px] sm:min-h-[380px]  bg-[#1d232a]  lg:w-96  shadow-xl "
+                className="card sm:min-w-[400px] sm:min-h-[380px]  bg-[#1d232a]  lg:w-96  shadow-xl  "
                 key={key}
               >
                 <div className="card-body">

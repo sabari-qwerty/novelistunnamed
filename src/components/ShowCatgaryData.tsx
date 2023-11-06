@@ -17,7 +17,7 @@ export const ShowCatgaryData: FC<SCD> = ({ catgrayname, catgaryid, skip }) => {
   if (isLoading) return <>loading</>;
 
   return (
-    <div className="w-full h-full bg-[#1d232a]">
+    <div className="w-full h-full bg-[#1d232a] overflow-auto">
       <div className="flex flex-col space-y-8 xl:w-3/5 lg:w-4/5 bg-[#1d232a] sm:w-full mx-auto text-[#ffffffb6]">
         {data.map((data: posts, key: number) => (
           <Link
