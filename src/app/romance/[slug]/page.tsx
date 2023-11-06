@@ -19,7 +19,6 @@ const Page: FC = () => {
   return (
     <main className="text-white relative">
       <ShowSinglePost slug={slug} type="poems" catgery={catgery} />
-      <div className="w-4 h-4 bg-white rounded absolute top-6 left-4"></div>
     </main>
   );
 };
