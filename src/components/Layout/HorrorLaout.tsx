@@ -10,7 +10,7 @@ export const HorrorLayout: FC<HorrorLayout> = ({ children }) => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowDiv(true);
+      setShowDiv(false);
     }, 2000);
 
     return () => clearInterval(timer);
@@ -18,8 +18,8 @@ export const HorrorLayout: FC<HorrorLayout> = ({ children }) => {
   return (
     <div>
       {showDiv && (
-        <div className="absolute w-full overflow-hidden">
-          <div className="image-continer">
+        <div className={`absolute w-full overflow-hidden `}>
+          <div className={`image-continer `}>
             <div className="image">
               <img src="/mask-sprite-claws.svg" alt="hello" />
             </div>

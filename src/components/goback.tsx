@@ -10,12 +10,13 @@ export const Goback: FC = () => {
 
   const router = useRouter();
 
-  console.log(pathname);
-
   return (
     <>
       {pathname !== "/" && (
-        <button className="fixed top-4 left-4" onClick={() => router.back()}>
+        <button
+          className="fixed top-4 left-4 z-50 sm:invisible lg:visible "
+          onClick={() => router.back()}
+        >
           <div className="center-con">
             <div className="round  flex w-[40px] h-[40px] justify-center items-center mx-auto ">
               <div id="cta ">
