@@ -42,7 +42,7 @@ const PinterestGrid: FC = () => {
               className="bg-primary rounded-md  flex flex-col space-y-2 p-4 text-white"
             >
               <div className="text-lg font-medium italic">
-                " {data.message} "
+                &ldquo; {data.message} &rdquo;
               </div>
               <div className="text-base font-semibold">{data.name}</div>
             </div>
