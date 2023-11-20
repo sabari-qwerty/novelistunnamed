@@ -32,6 +32,7 @@ export const ReviewButton: FC = () => {
       name,
       message,
     });
+
     setShowPopup(false);
     notify();
   };
