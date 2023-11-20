@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState, FC, ReactNode } from "react";
+import toast from "react-hot-toast";
 
 interface HorrorLayout {
   children: ReactNode;

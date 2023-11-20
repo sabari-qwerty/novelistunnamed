@@ -5,6 +5,8 @@ import {} from "@/service";
 import { useQuery } from "@tanstack/react-query";
 import { ShowSinglePost } from "@/components/ShowSinglePost";
 import { HorrorLayout } from "@/components/Layout/HorrorLaout";
+import { toast } from "react-toastify";
+import { Button } from "@/components/button/Button";
 const Page: FC = () => {
   const path = usePathname();
   const slug = path.split("/")[2];
@@ -16,6 +18,7 @@ const Page: FC = () => {
   // });
 
   // if (isLoading) return <>loadin</>;
+
   return (
     <main className="text-white relative">
       <ShowSinglePost slug={slug} type="poems" catgery={catgery} />

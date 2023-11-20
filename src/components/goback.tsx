@@ -12,7 +12,7 @@ export const Goback: FC = () => {
 
   return (
     <>
-      {pathname !== "/" && (
+      {pathname !== "/" && pathname !== "/review" && (
         <button
           className="fixed top-4 left-4 z-50 sm:invisible lg:visible  opacity-20 hover:opacity-100"
           onClick={() => router.back()}
